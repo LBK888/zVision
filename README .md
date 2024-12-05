@@ -13,4 +13,5 @@ Currently we released 3 types of yolo computer vision models:
 
 Lab Webpage: [http://lbk.tw/](http://lbk.tw/)
 
+Model download:
 [https://huggingface.co/leobk/zVision/](https://github.com/LBK888/zVision)
