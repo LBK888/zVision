@@ -18,4 +18,5 @@ zVision-widecam fine-tuned from YOLOv11:
 ![image](https://github.com/user-attachments/assets/8b0ddb52-cee3-42de-a2f9-4de66d66858b)
 
  zVision-adultsys model demo on Raspberry Pi4:  
-![image](https://github.com/user-attachments/assets/475a625c-1012-4acb-b5e8-5e1a9eb4718d)
+![image](https://github.com/user-attachments/assets/786382d0-2980-4002-aba2-adebb485704e)
+
