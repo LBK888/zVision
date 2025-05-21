@@ -1,5 +1,5 @@
 """
-v2025.04.10
+v2025.05.22
 To compare all yolo models in the folder.
 Good for calculate recall
 
@@ -42,7 +42,21 @@ def predict_on_camera(model):
     cap.release()
     cv2.destroyAllWindows()
 
-# ... existing code ...
+def ResizeWithAspectRatio(image, width=None, height=None, inter=cv2.INTER_AREA):
+    dim = None
+    (h, w) = image.shape[:2]
+
+    if width is None and height is None:
+        return image
+    if width is None:
+        r = height / float(h)
+        dim = (int(w * r), height)
+    else:
+        r = width / float(w)
+        dim = (width, int(h * r))
+
+    return cv2.resize(image, dim, interpolation=inter)
+
 def predict_on_videos(model, folder_path):
     # 定義支援的影片副檔名
     video_extensions = ['.mp4', '.avi', '.mov']
@@ -62,6 +76,7 @@ def predict_on_videos(model, folder_path):
         print(f"\n處理影片: {video_path}")
         cap = cv2.VideoCapture(video_path)
         window_name = f"YOLOv11/v12 預測 - {os.path.basename(video_path)}"
+        cv2.namedWindow(window_name, cv2.WINDOW_KEEPRATIO)
         print("播放中，按 'q' 可結束此影片的預測")
         
         # 新增：計數器變數
@@ -118,7 +133,8 @@ def predict_on_videos(model, folder_path):
                             cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
                 y_offset += 25
             
-            cv2.imshow(window_name, annotated_frame)
+            annotated_frameS = ResizeWithAspectRatio(annotated_frame, width=1080)
+            cv2.imshow(window_name, annotated_frameS)
             
             # 每100幀輸出一次統計到控制台
             if frame_count % 100 == 0:
@@ -262,7 +278,21 @@ def compare_models_on_videos(models_folder, output_folder=None):
 def main():
     # 取得目前執行檔所在的資料夾路徑
     main_folder = os.path.dirname(os.path.realpath(__file__)) + os.sep
-    model_path = os.path.join(main_folder, 'L9best.pt')
+    # 載入模型，先找出所有的模型
+    model_files = glob.glob(os.path.join(main_folder, "*.pt"))
+    print(f"找到的模型: {model_files}")
+    if len(model_files) == 0:
+        print("沒有找到任何模型")
+    elif len(model_files) == 1:
+        model_path = model_files[0]
+    else:
+        model_path = input("請輸入模型路徑: ").strip()
+        if not os.path.exists(model_path):
+            print("輸入的模型路徑不存在，程式結束。")
+            return
+        
+    # 或是自行修改下面這行
+    # model_path = os.path.join(main_folder, 'M7best.pt')
     
     # 載入預訓練的 YOLO 模型
     model = YOLO(model_path)
