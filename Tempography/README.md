@@ -3,6 +3,8 @@
 ## Overview
 Tempography is a tool for temporal colorization of videos, designed to process either a single video or all videos in a folder. It supports both manual and automatic ROI (Region of Interest) selection, background removal using various methods, and stacking of frames with rainbow colormap application. The results are saved as PNG images.
 
+![fig](https://github.com/user-attachments/assets/07be9839-ad45-4c38-a982-8b61ee8087fe)
+
 ## Features
 - Batch process all videos in a folder or a single video
 - Manual or automatic ROI (Region of Interest) selection
@@ -49,4 +51,4 @@ python main.py --file <video_path> --roi 100,100,300,300
 - `--save_dir`    Output directory for results
 
 ## License
-This project is licensed under the MIT License. 
+This Tempography program is licensed under the MIT License. 
