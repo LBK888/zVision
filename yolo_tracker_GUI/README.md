@@ -37,6 +37,10 @@
     ```bash
     python multicam_timelapse_analyzer.py
     ```
+   or for windows users, click: start.bat  
+    
+<img width="1525" height="1270" alt="image" src="https://github.com/user-attachments/assets/e0edcf44-843c-402d-bad5-3ae13c7cb245" />
+
 
 2.  **Workflow**:
     *   **Select Model**: Choose a YOLO model (`.pt`) from the dropdown or load a custom one.
@@ -104,6 +108,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
     ```bash
     python multicam_timelapse_analyzer.py
     ```
+   或 windows 使用者, 點選: start.bat  
+    
+<img width="1525" height="1270" alt="image" src="https://github.com/user-attachments/assets/e0edcf44-843c-402d-bad5-3ae13c7cb245" />
 
 2.  **操作流程**:
     *   **選擇模型**: 從下拉選單選擇 YOLO 模型 (`.pt`) 或載入自定義模型。
@@ -135,3 +142,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ### 授權 (License)
 本專案採用 MIT License 授權。詳細內容請參閱 LICENSE 文件。
+
