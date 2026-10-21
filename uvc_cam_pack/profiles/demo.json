@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "language": "zh_TW",
+  "experiment": "demo",
+  "notes": "",
+  "cameras": [
+    {
+      "id": "demo-1",
+      "source": "demo-1",
+      "name": "SIMULATION",
+      "device_path": "",
+      "backend": "auto",
+      "width": 640,
+      "height": 480,
+      "fps": 30.0,
+      "fourcc": "MJPG",
+      "auto_exposure": true,
+      "exposure": -6.0,
+      "auto_focus": true,
+      "focus": 0.0,
+      "auto_white_balance": true,
+      "white_balance": 4500.0,
+      "gain": 0.0,
+      "scientific_lock": false,
+      "strict_controls": false,
+      "warmup_s": 0,
+      "controls_interval_s": 1.0,
+      "auto_exposure_on": null,
+      "auto_exposure_off": null
+    }
+  ],
+  "geometry": {
+    "rois": [
+      {
+        "name": "plate",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "shape": "rectangle",
+        "rows": 1,
+        "cols": 1
+      }
+    ],
+    "perspective": [],
+    "output_size": [],
+    "stabilize": false,
+    "max_shift_px": 12.0,
+    "min_phase_response": 0.12,
+    "per_camera": {}
+  },
+  "capture": {
+    "mode": "timelapse",
+    "interval_s": 0.5,
+    "duration_s": 5,
+    "live": true,
+    "preview_fps": 8.0,
+    "queue_memory_mb": 128,
+    "overflow": "stop",
+    "min_free_gb": 1.0,
+    "max_frame_age_s": 2.0
+  },
+  "storage": {
+    "directory": "runs",
+    "raw": true,
+    "processed": true,
+    "image_format": "png",
+    "jpeg_quality": 97,
+    "video": false,
+    "video_container": "mp4",
+    "video_fps": 20.0,
+    "video_crf": 15,
+    "video_bitrate_mbps": 40.0,
+    "segment_s": 300.0,
+    "annotated_video": true
+  },
+  "analysis": {
+    "models": [
+      {
+        "path": "yolo26n-seg.pt",
+        "task": "segment",
+        "confidence": 0.25,
+        "classes": [],
+        "class_map": {}
+      }
+    ],
+    "device": "cpu",
+    "imgsz": 640,
+    "consensus": "none",
+    "consensus_iou": 0.3,
+    "fusion_iou": 0.3,
+    "tracker": "ukf",
+    "iou_threshold": 0.3,
+    "max_age": 30,
+    "min_hits": 3,
+    "trail_length": 60,
+    "gating_px": 1000.0,
+    "area_weight": 0.2,
+    "high_threshold": 0.5,
+    "low_threshold": 0.1,
+    "class_similarity": {},
+    "sequence_interval_s": 600.0,
+    "pixel_size_um": null,
+    "overlays": {
+      "boxes": true,
+      "labels": true,
+      "masks": true,
+      "keypoints": true,
+      "trails": true,
+      "velocity": false,
+      "timestamp": true
+    },
+    "font_scale": 0.6,
+    "line_width": 2,
+    "timestamp_color": [
+      255,
+      255,
+      255
+    ],
+    "redraw_original": false,
+    "input_images": "processed",
+    "use_capture_geometry": true
+  },
+  "hardware": {
+    "enabled": false,
+    "host": "127.0.0.1",
+    "port": 8765,
+    "token": "<redacted>",
+    "targets": [
+      "A1",
+      "A2"
+    ],
+    "settle_s": 1.0,
+    "timeout_s": 120.0,
+    "flush_frames": 3,
+    "sensor_port": "",
+    "sensor_baud": 115200,
+    "sensor_interval_s": 5.0,
+    "sensor_start_command": "START\n"
+  }
+}

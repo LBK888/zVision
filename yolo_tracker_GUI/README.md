@@ -1,5 +1,14 @@
 # Multi-Camera Timelapse Analyzer (多相機時間序列影像分析工具)
 
+> **Deprecated — replaced by [UVC Lab (`../uvc_cam_pack`)](../uvc_cam_pack/README.md).**
+> Use UVC Lab for camera acquisition, timelapse recording, YOLO analysis, and tracking. It combines acquisition and analysis in one PyQt6 application with YOLO26, multiple models, scientific settings, and English / Traditional Chinese / Japanese interfaces.
+>
+> **本工具已 deprecated，新的攝影與追蹤分析請改用 [UVC Lab／uvc_cam_pack](../uvc_cam_pack/readme_TW.md)。** 舊版保留供既有實驗參考。
+>
+> [Download the Windows single-file EXE](https://github.com/LBK888/zVision/releases/tag/uvc-lab-v0.1.0) · [English guide](../uvc_cam_pack/README.md) · [繁體中文說明](../uvc_cam_pack/readme_TW.md)
+
+The documentation below describes the legacy application.
+
 [English](#english) | [繁體中文](#繁體中文)
 
 ---

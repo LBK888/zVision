@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.egg-info/
+runs/
+.cache/
+upstream/
+*.pt
+*.onnx
+dist/
+build/
+

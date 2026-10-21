@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "checks": {
+    "ffmpeg": "<bundled>/tools/ffmpeg.exe",
+    "camera_subprocess": {
+      "modes": [
+        {
+          "width": 1280,
+          "height": 720,
+          "fps": 30,
+          "fourcc": "MJPG",
+          "evidence": "simulation",
+          "min_fps": null
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "fps": 22,
+          "fourcc": "MJPG",
+          "evidence": "simulation",
+          "min_fps": null
+        },
+        {
+          "width": 3264,
+          "height": 2448,
+          "fps": 10,
+          "fourcc": "MJPG",
+          "evidence": "simulation",
+          "min_fps": null
+        }
+      ],
+      "evidence": "simulation"
+    },
+    "qt_languages": [
+      "zh_TW",
+      "en",
+      "ja"
+    ],
+    "capture": {
+      "path": "<self-test>/runs/20261021_102044_experiment_c3541fba",
+      "frames": 4
+    },
+    "avi": {
+      "frames": 1,
+      "duplicates": 0,
+      "dropped_by_resampler": 0,
+      "segments": 1
+    },
+    "yolo26": {
+      "objects": 6,
+      "models": [
+        {
+          "config": {
+            "path": "yolo26n-seg.pt",
+            "task": "segment",
+            "confidence": 0.25,
+            "classes": [],
+            "class_map": {}
+          },
+          "resolved_path": "<bundled>/models/yolo26n-seg.pt",
+          "sha256": "361fbfabab285c3237700b6bb91d7ecfa602cd945fffda8dbe1242829b71e73f",
+          "names": {
+            "0": "person",
+            "1": "bicycle",
+            "2": "car",
+            "3": "motorcycle",
+            "4": "airplane",
+            "5": "bus",
+            "6": "train",
+            "7": "truck",
+            "8": "boat",
+            "9": "traffic light",
+            "10": "fire hydrant",
+            "11": "stop sign",
+            "12": "parking meter",
+            "13": "bench",
+            "14": "bird",
+            "15": "cat",
+            "16": "dog",
+            "17": "horse",
+            "18": "sheep",
+            "19": "cow",
+            "20": "elephant",
+            "21": "bear",
+            "22": "zebra",
+            "23": "giraffe",
+            "24": "backpack",
+            "25": "umbrella",
+            "26": "handbag",
+            "27": "tie",
+            "28": "suitcase",
+            "29": "frisbee",
+            "30": "skis",
+            "31": "snowboard",
+            "32": "sports ball",
+            "33": "kite",
+            "34": "baseball bat",
+            "35": "baseball glove",
+            "36": "skateboard",
+            "37": "surfboard",
+            "38": "tennis racket",
+            "39": "bottle",
+            "40": "wine glass",
+            "41": "cup",
+            "42": "fork",
+            "43": "knife",
+            "44": "spoon",
+            "45": "bowl",
+            "46": "banana",
+            "47": "apple",
+            "48": "sandwich",
+            "49": "orange",
+            "50": "broccoli",
+            "51": "carrot",
+            "52": "hot dog",
+            "53": "pizza",
+            "54": "donut",
+            "55": "cake",
+            "56": "chair",
+            "57": "couch",
+            "58": "potted plant",
+            "59": "bed",
+            "60": "dining table",
+            "61": "toilet",
+            "62": "tv",
+            "63": "laptop",
+            "64": "mouse",
+            "65": "remote",
+            "66": "keyboard",
+            "67": "cell phone",
+            "68": "microwave",
+            "69": "oven",
+            "70": "toaster",
+            "71": "sink",
+            "72": "refrigerator",
+            "73": "book",
+            "74": "clock",
+            "75": "vase",
+            "76": "scissors",
+            "77": "teddy bear",
+            "78": "hair drier",
+            "79": "toothbrush"
+          }
+        },
+        {
+          "config": {
+            "path": "yolo26n-pose.pt",
+            "task": "pose",
+            "confidence": 0.25,
+            "classes": [],
+            "class_map": {}
+          },
+          "resolved_path": "<bundled>/models/yolo26n-pose.pt",
+          "sha256": "eb3bb8268828aeaf515cec23a4bfafd793944a86fe9af94ba7823609c14522a9",
+          "names": {
+            "0": "person"
+          }
+        }
+      ]
+    },
+    "camera_scan": []
+  },
+  "frozen": true,
+  "validation_date": "2026-10-21",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "artifact": {
+    "name": "UVC-Lab-0.1.0-Windows-x64.exe",
+    "size_bytes": 475965403,
+    "sha256": "aac1c5f60bacede304d96287395234c471de2350300fb9712b98b34d2e58d581"
+  },
+  "packages": {
+    "PyInstaller": "6.22.3",
+    "pyinstaller-hooks-contrib": "2026.9",
+    "PyQt6": "6.11.0",
+    "PyQt6-Qt6": "6.11.0",
+    "torch": "2.11.0",
+    "torchvision": "0.26.0",
+    "ultralytics": "8.4.45",
+    "opencv-python": "4.13.0.92",
+    "numpy": "2.4.4",
+    "scipy": "1.17.1",
+    "openpyxl": "3.1.5",
+    "pyserial": "3.5",
+    "cv2-enumerate-cameras": "1.4.0"
+  },
+  "physical_camera_validation": false,
+  "test_environment": "Only Windows system directories on PATH; no external Python or FFmpeg on PATH. Fresh application data directory."
+}

@@ -3,6 +3,20 @@ license: apache-2.0
 ---
 **zVision is trained yolo package for zebrafish research**
 
+## Camera acquisition and tracking: use UVC Lab
+
+**`yolo_tracker_GUI` is deprecated. Use [UVC Lab (`uvc_cam_pack`)](uvc_cam_pack/README.md) for new camera acquisition, timelapse, YOLO analysis, and tracking workflows.** The legacy code remains available for reference and existing experiments.
+
+- [UVC Lab documentation — English](uvc_cam_pack/README.md)
+- [UVC Lab 使用說明 — 台灣繁體中文](uvc_cam_pack/readme_TW.md)
+- [Windows x64 single-file EXE](https://github.com/LBK888/zVision/releases/tag/uvc-lab-v0.1.0) — CPU build with PyQt6, YOLO26 segmentation/pose weights, and FFmpeg; no Python installation required.
+
+UVC Lab integrates multi-camera capture, camera mode/FPS measurement, scientific exposure controls, plate ROIs, correction, raw/processed recording, multi-model YOLO26 analysis, UKF/SORT/ByteTrack tracking, reproducibility records, and an ESP32/Pi/PC motion-controller handshake. Its interface supports Traditional Chinese (Taiwan), English, and Japanese.
+
+**`yolo_tracker_GUI` 已停止作為新工作流程使用（deprecated）。新的攝影、縮時拍攝與追蹤分析請改用 [`uvc_cam_pack` / UVC Lab](uvc_cam_pack/readme_TW.md)。** 舊程式保留供既有實驗與參考使用。
+
+## Zebrafish models
+
 Currently, we are open-sourcing three vision models:
 
 1. zVision-widecam: A wide-angle camera/webcam model designed for top-view segmentation and tracking of 5–10 dpf larvae.
